@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
+        <!-- Google tag (gtag.js) -->
+<script async src="[https://www.googletagmanager.com/gtag/js?id=G-06HPVBRKZ5](https://www.googletagmanager.com/gtag/js?id=G-06HPVBRKZ5)"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-06HPVBRKZ5');
+</script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="소아 체중별, 연령별 약 용량 계산기입니다. 2022년 개정된 식약처의 ‘소아·청소년에 대한 의약품 적정사용 정보집’을 기반으로 소아에게 다빈도로 처방되는 약성분 중심으로 구성하였습니다. 약물별로 환아의 체중을 입력하면 적정 용량을 계산해줌으로써 약사의 처방감사 업무에 도움이 되고자 합니다." />
@@ -14,15 +23,7 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548693432714938"
         
 crossorigin="anonymous"></script>
-        <!-- Google tag (gtag.js)구글 애널리틱스 -->
-<script async src="[https://www.googletagmanager.com/gtag/js?id=G-06HPVBRKZ5](https://www.googletagmanager.com/gtag/js?id=G-06HPVBRKZ5)"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-06HPVBRKZ5');
-</script>
+        
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -135,16 +136,16 @@ gtag('config', 'G-06HPVBRKZ5');
                     <br><br>
                     <input type="button" value="계산하기" id="azicalculateButton">
                     <br><br>
-                    *1일 요법(30mg/kg/dqy) 
+                    *1일 요법(30mg/kg/day) 
                     <input type="number" id="azi1dResultInput">ml
                     <br><br>
-                    *3일 요법(10mg/kg/dqy) 
+                    *3일 요법(10mg/kg/day) 
                     <input type="number" id="azi3dResultInput">ml
                     <br><br>
-                    *5일 요법 첫째날(10mg/kg/dqy) 
+                    *5일 요법 첫째날(10mg/kg/day) 
                     <input type="number" id="azi5d1ResultInput">ml
                     <br><br>
-                    *5일 요법 둘째날 부터(5mg/kg/dqy) 
+                    *5일 요법 둘째날 부터(5mg/kg/day) 
                     <input type="number" id="azi5d2ResultInput">ml
                     <br><br>
                     <input type="button" value="초기화" onclick="azireset()">
