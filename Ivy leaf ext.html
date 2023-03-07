@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <!-- Google tag (gtag.js) -->
+    <head> 
+      <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-06HPVBRKZ5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,7 +10,7 @@
 
   gtag('config', 'G-06HPVBRKZ5');
 </script>
-        
+     
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="소아 체중별, 연령별 약 용량 계산기입니다. 2022년 개정된 식약처의 ‘소아·청소년에 대한 의약품 적정사용 정보집’을 기반으로 소아에게 다빈도로 처방되는 약성분 중심으로 구성하였습니다. 약물별로 환아의 체중을 입력하면 적정 용량을 계산해줌으로써 약사의 처방감사 업무에 도움이 되고자 합니다." />
@@ -24,7 +24,7 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548693432714938"
         
 crossorigin="anonymous"></script>
-        
+       
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -104,6 +104,7 @@ crossorigin="anonymous"></script>
                   <a class="list-group-item list-group-item-action list-group-item-light p-3" href="theophylline.html">Theophylline</a>
                   <a class="list-group-item list-group-item-action list-group-item-light p-3" href="trimebutine.html">Trimebutine</a>
                   <a class="list-group-item list-group-item-action list-group-item-light p-3" href="valproate.html">Valproate</a>
+
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -111,7 +112,7 @@ crossorigin="anonymous"></script>
                 <!-- Top navigation-->
                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <div class="container-fluid">
-                    <button class="btn btn-primary" id="sidebarToggle">Menu</button>
+                  <button class="btn btn-primary" id="sidebarToggle">Menu</button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
@@ -134,16 +135,18 @@ crossorigin="anonymous"></script>
                 </nav>
                 <!-- Page content-->
                 <style>
-                 .oselbody {
+                 .ivybody {
                     padding: 30px;
                   }
                 </style>
                 
-                <div class="oselbody">
-                    <h1>Oseltamivir</h1>
+                <div class="ivybody">
+                    <h1>Ivy leaf ext. </h1>
                     <br>
-            
-            <!-----table1-->
+            <button id="ivy70toggleBtn"><h4>아이비엽 70%에탄올유동엑스 20mg/ml</h4></button>
+            <div id="ivy70toggleContent"> 
+            <br><br>
+            <!-----table-->
             <style>
               table {
                 border: 1px solid black;
@@ -161,100 +164,105 @@ crossorigin="anonymous"></script>
                   <th>제형</th>
                   <th>대표약품명</th>
                   <th>동일약품찾기</th>
+                  
               </tr>
               <tr>
-                  <td>항바이러스제</td>
-                  <td>캡슐제 30mg, 45mg, 75mg</td>
-                  <td>타미플루캡슐</td>
-                  <td><a href="https://www.health.kr/searchDrug/result_sunb.asp?drug_cd=A11AKP08G0592" target="_blank">클릭</a></td>
+                <td>호흡기계약물</td>
+                <td>아이비엽 70%에탄올유동엑스 20mg/ml</td>
+                <td>헤브론시럽</td>
+                <td><a href="https://www.health.kr/searchDrug/result_sunb.asp?drug_cd=A11AOOOOO0915" target="_blank">클릭</a></td>
               </tr>
-          </table> 
-          <br>   
-          <style>
-            table {
-              border: 1px solid black;
-              border-collapse: collapse;
-            }
-            th, td {
-              border: 1px solid black;
-              padding: 15px;
-            }
-            </style>
-            
-        <table>
-            <tr>
-                <th>약효군</th>
-                <th>제형</th>
-                <th>대표약품명</th>
-                <th>동일약품찾기</th>
-            </tr>
-            <tr>
-                <td>항바이러스제</td>
-                <td>현탁액 6mg/ml</td>
-                <td>보령플루현탁용분말</td>
-                <td><a href="https://www.health.kr/searchDrug/result_sunb.asp?drug_cd=2018010300005" target="_blank">클릭</a></td>
-            </tr>
-        </table>  
+          </table>     
                      <br><br>
                     
-                    [2주이상 1세미만] 체중: 
-                    <input type="number" id="oselweightInput">kg
-                    <br><br>
-                    <input type="button" value="계산하기" id="oselcalculateButton">
-                    <br><br>
-                    [2주이상 1세미만] 1회 복용량:<br><br>
-                    캡슐 
-                    <input type="number" id="oselResultInput">mg
-                    <br><br>
-                    현탁액
-                    <input type="number" id="oselmlResultInput">ml
-                    <br><br>
-                    <input type="button" value="초기화" onclick="oselreset()">
                     
-                    <script>
-                 document.getElementById("oselcalculateButton").addEventListener("click", function() {calculate();});
-               document.getElementById("oselweightInput").addEventListener("keyup", function(event) {if (event.keyCode === 13) {calculate();}});
-               function calculate() {
-                let oselweight = Number(document.getElementById("oselweightInput").value);
-                let oselResult = (oselweight * 3) ;
-                document.getElementById("oselResultInput").value = oselResult;
-                let oselmlResult = (oselweight * 3)/6 ;
-                document.getElementById("oselmlResultInput").value = oselmlResult;
-               
-              };
+                  <h4><소아 용법/용량></h4>
+                  [시럽제]<br>
+                  ·성인 및 15세 이상 : 아이비엽70%에탄올유동엑스로서 1회 100 mg(5ml)을 1일 3회 복용<br>
+                  ·4～14세 : 이 약으로서 1회 100 mg(5ml)을 1일 2회 복용<br>
+                  ·2～3세 : 이 약으로서 1회 50 mg(2.5ml)을 1일 3회 복용<br>
+            </div>
+            <script>
+              const ivy70toggleButton = document.getElementById("ivy70toggleBtn");
+              const ivy70toggleContent = document.getElementById("ivy70toggleContent");
+              ivy70toggleContent.style.display = "none";
             
-                function oselreset(){
-                            document.getElementById("oselweightInput").value = "";
-                            document.getElementById("oselResultInput").value = "";
-                            document.getElementById("oselmlResultInput").value = "";}
-                            
-                  </script>
+              ivy70toggleButton.addEventListener("click", function() {
+                if (ivy70toggleContent.style.display === "none") {
+                  ivy70toggleContent.style.display = "block";
+                } else {
+                  ivy70toggleContent.style.display = "none";
+                }
+              });
+            </script>
+            
+            <!--...........................................................................................................................................................................................................-->
+            <br><br>
+            
+            <button id="ivy30toggleBtn"><h4>아이비엽 30%에탄올건조엑스(5~7.5→1) 7mg/mL</h4></button>
+            <div id="ivy30toggleContent"> 
+            <br><br>
+             <!-----table-->
+             <style>
+              table {
+                border: 1px solid black;
+                border-collapse: collapse;
+              }
+              th, td {
+                border: 1px solid black;
+                padding: 15  px;
+              }
+              </style>
+              
+              <table>
+                <tr>
+                    <th>약효군</th>
+                    <th>제형</th>
+                    <th>대표약품명</th>
+                    <th>동일약품찾기</th>
+                    
+                </tr>
+                <tr>
+                  <td>호흡기계약물</td>
+                  <td>아이비엽 30%에탄올건조엑스(5~7.5→1) 7mg/mL</td>
+                  <td>헤브론에프시럽</td>
+                  <td><a href="https://www.health.kr/searchDrug/result_sunb.asp?drug_cd=2020070700001" target="_blank">클릭</a></td>
+                </tr>
+            </table>      
+                    
             <br><br>
                   <h4><소아 용법/용량></h4>
-                  · 인플루엔자 A 및 인플루엔자 B 바이러스 감염증<br>
-                    - 인플루엔자 증상이 발현된 첫째 또는 둘째 날에 치료를 시작할 것<br>
-                    - 식사와 무관하게 복용 가능<br>
-                    - 13세 이상 청소년 및 성인: 75mg bid. 5일 동안 복용<br>
-                    - 1세 이상 12세 이하 소아: 아래 표에 따라 5일 동안 복용<br>
-                    <img src="osel 용량표.jpg" alt="표"><br>
-                    - 2주 이상 1세 미만 소아: 3mg/kg bid. 5일 동안 복용<br>
-
-                  
+                  [시럽제]
+                  - 2~5세: 17.5mg(2.5ml) bid
+                  - 6~14세: 35mg(5ml) bid
+                  - 15세 이상: 35~52.5mg(5~7.5ml) bid~tid (1일 최대용량: 105mg=15ml)
+            </div>
+             
+            <script>
+              const ivy30toggleButton = document.getElementById("ivy30toggleBtn");
+              const ivy30toggleContent = document.getElementById("ivy30toggleContent");
+              ivy30toggleContent.style.display = "none";
+            
+              ivy30toggleButton.addEventListener("click", function() {
+                if (ivy30toggleContent.style.display === "none") {
+                  ivy30toggleContent.style.display = "block";
+                } else {
+                  ivy30toggleContent.style.display = "none";
+                }
+              });
+            </script></div>
+            <br><br><br><br>
             </div>
         </div>
-    </div>
-            
-            
-           
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
     <footer>
-        <div class="container">
-          <p>reference:  식품의약품안전처 소아청소년에 대한 의약품 적정사용 정보집 2022년 개정판, 약학정보원, 킴스온라인<br>
-             수정 요청 및 문의사항 : kiddose23@gmail.com
-        </div>
-      </footer>
+      <div class="container">
+        <p>reference:  식품의약품안전처 소아청소년에 대한 의약품 적정사용 정보집 2022년 개정판, 약학정보원, 킴스온라인<br>
+           수정 요청 및 문의사항 : kiddose23@gmail.com
+      </div>
+    </footer>
 </html>
